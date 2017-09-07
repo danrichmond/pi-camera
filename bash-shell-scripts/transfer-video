@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Transferring video from Pi-2 to Pi-1..."
+ssh noname@10.0.0.207 'scp pi@10.0.0.58:/home/pi/Desktop/folder/videos/video.h264 /home/noname/Desktop/folder/videos; exit'
+
+echo "First transfer complete, now transferring to local machine..."
+
+scp noname@10.0.0.207:/home/noname/Desktop/folder/videos/video.h264 /Users/dan/Desktop/PiAlbum/videos
+
+echo "Last transfer has completed."

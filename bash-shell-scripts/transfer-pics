@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Transferring pictures from Pi-2 to Pi-1..."
+ssh noname@10.0.0.207 'scp pi@10.0.0.58:/home/pi/Desktop/folder/images/image.jpg /home/noname/Desktop/folder/photos; exit'
+
+echo "First transfer complete, now transferring to local machine..."
+
+scp noname@10.0.0.207:/home/noname/Desktop/folder/photos/image.jpg /Users/dan/Desktop/PiAlbum/photos
+
+echo "Last transfer has completed."
